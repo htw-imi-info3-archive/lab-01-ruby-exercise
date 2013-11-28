@@ -1,4 +1,4 @@
-# Exercise: write a proc that provides content for the following html template:
+
 def template
   template =<<DELIM
 <html>
