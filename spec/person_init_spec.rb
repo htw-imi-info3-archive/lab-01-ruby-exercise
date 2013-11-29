@@ -7,7 +7,7 @@ describe "Person initialization" do
     argument_hash =   {:name => "Dagobert", :hobbies => "Money"}
     p = Person.new(argument_hash)
     expect(p.name).to eq "Dagobert"
-    expect(p.hobbies).to eq == "Money"
+    expect(p.hobbies).to eq "Money"
 
   end
 
