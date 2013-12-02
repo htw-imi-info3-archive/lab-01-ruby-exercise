@@ -45,7 +45,7 @@ describe Person do
       a = [p1,p2,p3,p4]
       result = p1.friendslist(a)
       expect(result[0]).to eq [2,"Money, Bathing","Dagobert1","Dagobert2"]
-      expect(result).to include(1,"Bathing","Dagobert2","Donald")
+      expect(result).to include([1,"Bathing","Dagobert2","Donald"])
       expect(result.length).to eq 3
     end
   end
