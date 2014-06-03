@@ -20,4 +20,16 @@ describe "Person initialization" do
     p = Person.new
   end
 
+  it "should work with an arbitrary attribute" do
+    random_field_name = (0...5).map { (97 + rand(26)).chr }.join
+    RFN = random_field_name.to_sym
+    class Person
+      attr_accessor RFN
+    end
+    random_field_value = "The Value of the Random Field"
+    argument_hash =   {:name => "Dagobert", :hobbies => "Money",random_field_name.to_sym => random_field_value}
+    p = Person.new(argument_hash)
+    expect(p.send(random_field_name)).to eq random_field_value
+  end
+
 end
