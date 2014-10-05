@@ -17,7 +17,7 @@ describe Person do
 
       argument_hash = {name: "Dagobert",hobbies: "Money,Bathing"}
       p = Person.new(argument_hash)
-      p.name.should == "Dagobert"
+      expect(p.name).to eq("Dagobert")
       expect(p.hobbies).to eq ["Money", "Bathing"]
 
     end
