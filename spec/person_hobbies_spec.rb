@@ -14,21 +14,10 @@ describe Person do
       expect(p.hobbies).to eq ["a","b","c"]
     end
     it "should initialize it's fields from a hash" do
-
       argument_hash = {name: "Dagobert",hobbies: "Money,Bathing"}
       p = Person.new(argument_hash)
       expect(p.name).to eq("Dagobert")
       expect(p.hobbies).to eq ["Money", "Bathing"]
-
-    end
-
-    it "should raise an UnknownAttributeError if a field is unknown" do
-      argument_hash =   {:name => "Dagobert", :hobbies => "Money",:nonexistentfield => "some Value"}
-      expect { p = Person.new(argument_hash) }.to raise_error(UnknownAttributeError)
-    end
-
-    it "should still be initializable without any parameters" do
-      p = Person.new
     end
   end
   describe "hobby sharing" do
