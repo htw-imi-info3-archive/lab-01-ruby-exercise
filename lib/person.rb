@@ -4,4 +4,6 @@ class Person
 
   def initialize
   end
+  def self.friendslist(persons)
+  end
 end
